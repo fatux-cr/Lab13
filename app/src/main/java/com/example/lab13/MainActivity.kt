@@ -3,45 +3,24 @@ package com.example.lab13
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.lab13.ui.theme.Lab13Theme
+import androidx.compose.material3.Surface
+import com.example.lab13.ui.AnimatedVisibilityScreen
+//import com.example.lab13.ui.AnimateColorScreen
+//import com.example.lab13.ui.AnimateSizePositionScreen
+//import com.example.lab13.ui.AnimatedContentScreen
+//import com.example.lab13.ui.CombinedAnimationsScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            Lab13Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            Surface {
+                AnimatedVisibilityScreen()
+                //AnimateColorScreen()
+                //AnimateSizePositionScreen()
+                //AnimatedContentScreen()
+                //CombinedAnimationsScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Lab13Theme {
-        Greeting("Android")
     }
 }
