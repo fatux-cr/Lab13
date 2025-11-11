@@ -8,7 +8,7 @@ import com.example.lab13.ui.AnimatedVisibilityScreen
 import com.example.lab13.ui.AnimateColorScreen
 import com.example.lab13.ui.AnimateSizePositionScreen
 import com.example.lab13.ui.AnimatedContentScreen
-//import com.example.lab13.ui.CombinedAnimationsScreen
+import com.example.lab13.ui.CombinedAnimationsScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +18,8 @@ class MainActivity : ComponentActivity() {
                 //AnimatedVisibilityScreen()
                 //AnimateColorScreen()
                 //AnimateSizePositionScreen()
-                AnimatedContentScreen()
-                //CombinedAnimationsScreen()
+                //AnimatedContentScreen()
+                CombinedAnimationsScreen()
             }
         }
     }
